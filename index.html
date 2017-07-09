@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to React Native</title>
+
+		<meta name="description" content="Girl Develop It React Native course">
+		<meta name="author" content="Elliot Schrock">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/gdidefault.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <!-- Opening -->
+				<section>
+					<h2>Intro to React Native</h2>
+					<h4>Elliot Schrock</h4>
+				</section>
+
+				<section>
+					<h2>My Thesis</h2>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						Programming is as close to wizardry as muggles can get.
+					</blockquote>
+				</section>
+				
+				<section>
+					<h2>Why isn't everyone doing it?</h2>
+					<p class="fragment">Turns out, magic can be super frustrating.</p>
+					<img src="https://media.tenor.com/images/fa214e8b5b3c277f31ca098cca49e601/tenor.gif" class="fragment">
+				</section>
+				
+				<section>
+					<h2>Class Mechanics</h2>
+					<ul>
+						<li class="fragment">Lecture</li>
+						<li class="fragment">Breaks</li>
+						<li class="fragment">Examples</li>
+						<li class="fragment">Solutions</li>
+						<li class="fragment">Exercises</li>
+						<li class="fragment">Questions!</li>
+					</ul>
+				</section>
+
+        <section>
+          <h3>Break time!</h3>
+          <p class="fragment"><iframe width="640" height="360" src="https://www.youtube.com/embed/Htaj3o3JD8I?t=44" frameborder="0" allowfullscreen></iframe></p>
+        </section>
+
+				<section>
+					<h2>What the h*ck is React Native?</h2>
+					<p class="fragment">A javascript framework for building near-native quality cross platform apps.</p>
+				</section>
+				
+				<section>
+					  <h2>So what?</h2>
+					  <p>So, we can build apps that look and feel native (that is, built with Objective-C/Swift or Java/Kotlin) without writing the same code twice on different platforms</p>
+				</section>
+				
+				<section>
+					  <h2>Goals</h2>
+					<ul>
+            <li class="fragment">Learn the building blocks for RN development</li>
+						<li class="fragment">Learn to work entirely cross platform</li>
+						<li class="fragment">Build confidence through repetition</li>
+						<li class="fragment">Stay organized as code grows</li>
+						<li class="fragment">Build in the highest yield way</li>
+					</ul>
+				</section>
+				
+				<section>
+					  <h2>Structure of a React Native project</h2>
+					  <pre>
+
+                project-folder/
+                  <b class="fragment">android/</b>
+                  <b class="fragment">app.json</b>
+                  <b class="fragment">index.android.js</b>
+                  <b class="fragment">index.ios.js</b>
+                  <b class="fragment">ios/</b>
+                  <b class="fragment">node_modules/</b>
+                  <b class="fragment">package.json</b>
+
+					  </pre>
+				</section>
+        
+        <section>
+            <h2>Structure of a React Native project</h2>
+            <pre>
+
+                project-folder/
+                  android/
+                  <a>app/</a>
+                  app.json
+                  index.android.js
+                  index.ios.js
+                  ios/
+                  node_modules/
+                  package.json
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>index.ios.js</h2>
+            <pre>
+            <code>import React, { Component } from 'react';
+import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+
+export default class Example extends Component {
+  render() {
+    return (
+      &lt;View style={styles.container}>
+        &lt;Text style={styles.welcome}>
+          Welcome to React Native!
+        &lt;/Text>
+        &lt;Text style={styles.instructions}>
+          To get started, edit index.ios.js
+        &lt;/Text>
+        &lt;Text style={styles.instructions}>
+          Press Cmd+R to reload,{'\n'}
+          Cmd+D or shake for dev menu
+        &lt;/Text>
+      &lt;/View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
+
+AppRegistry.registerComponent('Example', () => Example);
+            </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>index.android.js</h2>
+            <pre>
+            <code>import React, { Component } from 'react';
+import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+
+export default class Example extends Component {
+  render() {
+    return (
+      &lt;View style={styles.container}>
+        &lt;Text style={styles.welcome}>
+          Welcome to React Native!
+        &lt;/Text>
+        &lt;Text style={styles.instructions}>
+          To get started, edit index.android.js
+        &lt;/Text>
+        &lt;Text style={styles.instructions}>
+          Press Cmd+R to reload,{'\n'}
+          Cmd+D or shake for dev menu
+        &lt;/Text>
+      &lt;/View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
+
+AppRegistry.registerComponent('Example', () => Example);
+            </code>
+            </pre>
+        </section>
+        
+        <section>
+            <h2>Goals</h2>
+          <ul>
+            <li>Learn the building blocks for RN development</li>
+            <li><a>Learn to work entirely cross platform</a></li>
+            <li>Build confidence through repetition</li>
+            <li>Stay organized as code grows</li>
+            <li>Build in the highest yield way</li>
+          </ul>
+        </section>
+        
+        <section>
+            <h3>Let's add a library!</h3>
+            <p class="fragment">How? <code class="fragment">package.json</code></p>
+            <p class="fragment">(Note: this is a huge part of React Native, and programming in general)</p>
+        </section>
+
+			</div>
+  		<footer>
+        <div class="copyright">
+          Intro to React Native -- NYC --
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

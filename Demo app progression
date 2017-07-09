@@ -1,0 +1,57 @@
+Topics covered:
+- Project structure
+- Organizing with the app/ folder
+- Adding packages
+- Cross platform code
+- Layouts in render
+- Native base
+- Props
+- Styling
+- Constructors
+- State
+- Binding methods
+- Responding to touches
+- Text input
+- Networking
+- Maps
+- Location
+- Navigation
+
+Stopwatch teaching order:
+- Native Base lib: very important to use the correct versions! Native base seems to have issues with the latest version of RN.
+- Abstract index.*.js to app.js and copy over content.
+- Go through existing code
+- Delete unneeded view components from app.js
+- Add stuff from native base (Container, Content, Button)
+- Style it! (Text color for button, centering components)
+- State for running
+- Add time library
+- Abstract start
+- Add logic for timing
+Exercise:
+Reset button and restart from same place
+
+Weather teaching order:
+- Create project
+- Copy over dependencies and install
+- Abstract index.*.js as before
+- Copy stopwatch app.js to Weather app.js (leverage past work!)
+- Rename variables and delete unnecessary code
+- Add InputGroup and Input to layout
+- Add state for temperature and text input
+- Add url to get weather method
+- Add fetch call and parsing to get weather method
+Exercise:
+Add conditions (sunny? cloudy? etc (see responseJson!))
+
+Bus teaching order:
+- Follow same initial steps as last two (confidence through repetition)
+- Add api file
+- Explain and demo list/listitem
+- Add router flux and move code from app.js to component
+- Add header
+- Create routes component
+- Pass info
+In class exercise:
+Add list for routes
+- Bonus if time: display buses on map

@@ -1,0 +1,26 @@
+{
+  "name": "Stopwatch",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "eject-native-base": "node node_modules/native-base/ejectTheme.js"
+  },
+  "dependencies": {
+    "minutes-seconds-milliseconds": "^1.0.3",
+    "native-base": "2.1.4",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0",
+    "react-native-vector-icons": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "2.1.0",
+    "jest": "20.0.4",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
