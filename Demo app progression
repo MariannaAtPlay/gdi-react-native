@@ -1,4 +1,4 @@
-Topics covered:
+Topics covered in this class:
 - Project structure
 - Organizing with the app/ folder
 - Adding packages
@@ -13,9 +13,9 @@ Topics covered:
 - Responding to touches
 - Text input
 - Networking
-- Maps
-- Location
+- Lists
 - Navigation
+- Maps (if time)
 
 Stopwatch teaching order:
 - Native Base lib: very important to use the correct versions! Native base seems to have issues with the latest version of RN.
